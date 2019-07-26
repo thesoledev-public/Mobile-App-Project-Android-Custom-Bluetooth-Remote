@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+        <title>Bluetooth Arduino</title>
+        <link rel="stylesheet" type="text/css" href="css/vendor/jquery.mobile-1.4.5.css" />
+        <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/vendor/font-awesome.css" /> 
+        <link rel="stylesheet" type="text/css" href="css/index.css" />        
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>        
+            
+        <script type="text/javascript" src="js/vendor/jquery-1.11.3.js"></script>
+        <script type="text/javascript" src="js/vendor/jquery.mobile-1.4.5.js"></script> 
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    </head>
+    <body>
+
+        <div class="app">
+            <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 text-center">
+                            <h2>Biped Robot Bluetooth Command<br /><small>BY JBG</small></h2>
+                        </div>
+                    </div>                
+                
+
+                <div id="mainPage">
+                  <ul id="deviceList" data-role="listview">
+                    </ul>
+                    <button id="refreshButton">Refresh</button>
+
+
+                </div>
+                <div id="detailPage">
+
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-6" style="text-align:center;">
+                      <a class="kbd light btn-action btn-wide" data-value="forward">Walk Forward</a><br />
+                      <a class="kbd light btn-action btn-wide" data-value="backward">Walk Backward</a><br />
+                      <a class="kbd light btn-action btn-wide" data-value="left">Turn Left</a><br />
+                      <a class="kbd light btn-action btn-wide" data-value="right">Turn Right</a><br />
+                      <a class="kbd light btn-action btn-wide" data-value="reset">Reset</a><br />
+                      </div>
+                      <div class="col-xs-12 col-sm-6" style="text-align:center;"><br /><a class="kbd light btn-action txt-30" style="font-size: 18px;" data-value="command1"> C1 </a>&nbsp;<a style="font-size: 18px;" class="kbd light btn-action txt-30"  data-value="command2"> C2 </a>&nbsp;<a style="font-size: 18px;" class="kbd light btn-action txt-30"  data-value="command3">C3</a>&nbsp;<a style="font-size: 18px;" class="kbd light btn-action txt-30"  data-value="command4">C4</a>&nbsp;<a style="font-size: 18px;" class="kbd light btn-action txt-30"  data-value="command5">C5</a>&nbsp;<a style="font-size: 18px;" class="kbd light btn-action txt-30"  data-value="command6">C6</a></div>              
+                    </div>
+                    <br /><br /><br />
+
+                    <div class="row">
+                      <div class="col-sm-8" style="text-align:center;"><input type="text" id="messageInput" class="form-control" value="" placeholder="Type Command Here"/></div>
+                      <div class="col-sm-4" style="text-align:center;"><button id="sendButton"  class="btn btn-default">Send</button></div>
+                    </div>
+                    <br />
+                    <div class="row">
+                      <div class="col-sm-12" style="text-align:center;"><button id="disconnectButton">Disconnect</button></div>
+                    </div>
+                    <div id="resultDiv"></div>                
+                </div>
+                <div id="statusDiv"></div>
+            </div>
+
+
+
+        </div>
+
+        
+        <script type="text/javascript" src="js/vendor/jquery-1.11.3.js"></script>
+        <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+       
+  
+        <script type="text/javascript" src="js/index.js"></script>          
+        <script type="text/javascript">
+
+            app.initialize();
+            //app.showDetailPage();
+
+        </script>
+    </body>
+</html>
